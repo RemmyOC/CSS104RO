@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(219, 168, 179);
+    background-color:rgb(25, 22, 27); 
+
+}
+
+header{
+    background-color: rgba(109, 9, 34, 0.788);
+    padding: 25px;
+    border-radius: 5px;
+    margin: 25px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+/* fill in the image more for the more profolio look */
+section img{
+    width: 80%;
+}
+
+/* this is the parent around our columns */
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* each column in the flex display */
+.column{
+    /* this means that our columns will fill in the available space */
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.945);
+    border: 1px solid rgb(194, 0, 90);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* this style will only be added if there is a column class next to a column class */
+.column + .column{
+    margin-left: 10px;
+}
+
+/* make the columns look better on a smaller screen - stack them */
+@media (max-width: 768px){
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column + .column{
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    section img{
+        width: 90%;
+    }
+}
+
+/* menu styles */
+nav ul{
+    /* get rid of the bullets */
+    list-style-type: none;
+    /* center the text */
+    text-align: center;
+    /* display items horizontally */
+    overflow: hidden;
+}
+
+nav ul li{
+    /* gives items properties of both inline & block, so they will be next to each other on the row, but also height can be set */
+    display: inline-block;
+}
+
+/* style the links to our pages - this will only apply to anchor tags that are in our list, in a nav section */
+nav ul li a{
+    color: whitesmoke;
+    background-color:rgba(206, 31, 113, 0.9);
+    text-align: center;
+    /* 14px top/bottom 16px left/right */
+    padding: 10px 16px;
+    /* turn off the link underlining */
+    text-decoration: none;
+    /* will support padding and height, etc. */
+    display: block;
+
+    border-radius: 5px;
+}
+
+/* change how the menu items look when the mouse hovers over them */
+nav ul li a:hover{
+    background-color:rgba(141, 14, 73, 0.9);
+}

@@ -17,8 +17,9 @@ header{
     color: rgb(255, 255, 255);
 }
 
-/* this will make any images contained in section tags 50% width */
-
+section img{
+    width: 50%;
+}
 
 /* this is the parent around our columns */
 .flex-container{
@@ -31,19 +32,19 @@ header{
 .column{
     /* this means that our columns will fill in the available space */
     flex: 1;
-    background-color: rgb(212, 194, 230);
+    background-color: rgb(228, 219, 238);
     border: 1px solid rgb(70, 4, 35);
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: center;
 }
 
 /* this style will only be added if there is a column class next to a column class */
 .column + .column{
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 /* make the columns look better on a smaller screen - stack them */
-@media (max-width: 600px){
+@media (max-width: 768px){
     .flex-container{
         flex-direction: column;
         align-items: center;
@@ -91,5 +92,5 @@ nav ul li a{
 
 /* change how the menu items look when the mouse hovers over them */
 nav ul li a:hover{
-    background-color:rgba(78, 1, 33, 0.9);
+    background-color:rgba(63, 0, 26, 0.9);
 }
